@@ -9,3 +9,5 @@ function Twitterus(mount) {
     
     //call .addChild() on 'this.root' to add a child node
 }
+
+module.exports = Twitterus;

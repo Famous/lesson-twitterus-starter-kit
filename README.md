@@ -1,4 +1,4 @@
-##Carousel Lesson Starter Kit
+## Twitterus Lesson Starter Kit
 
 After cloning the repo:
 
@@ -6,11 +6,9 @@ After cloning the repo:
     npm run start-dev
 
 
-![screenshot](./Screenshot.png)
-
 Project files are found in:
 
-    ./src/carousel
+    ./src/twitterus
 
 The _index.html_ file is found in:
 
