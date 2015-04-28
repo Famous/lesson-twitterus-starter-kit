@@ -1,5 +1,8 @@
 ## Twitterus Lesson Starter Kit - Step 1: Add Nodes
 
+# Checkout the full lesson here: 
+
+[http://learn-staging.famo.us/lessons/twitterus/Layout.html](http://learn-staging.famo.us/lessons/twitterus/Layout.html)
 
 =================================
 _Excerpt from Step 1: Add Nodes_
