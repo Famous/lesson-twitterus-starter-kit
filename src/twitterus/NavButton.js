@@ -33,6 +33,10 @@ NavButton.prototype.onReceive = function onReceive (event, payload) {
     }
 };
 
+NavButton.prototype.getId = function getId () {
+    return this.id;
+};
+
 // apply the on class
 NavButton.prototype.on = function on () {
     this.el.removeClass('off').addClass('on');
