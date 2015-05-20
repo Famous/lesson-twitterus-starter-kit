@@ -16,4 +16,4 @@ var data = {
 
 };
 
-module.expots = data;
+module.exports = data;
