@@ -1,4 +1,5 @@
 var Node = require('famous/core/Node');
+var DOMElement = require('famous/dom-renderables/DOMElement');
 
 // The nav button class will show the name of a section
 // and emit a click event when clicked
@@ -40,6 +41,10 @@ NavButton.prototype.on = function on () {
 // apply the off class
 NavButton.prototype.off = function off () {
     this.el.removeClass('on').addClass('off');
+};
+
+NavButton.prototype.getId = function getId () {
+    return this.id;
 };
 
 // make and style an element

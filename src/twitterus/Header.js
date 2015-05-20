@@ -13,7 +13,7 @@ function Header () {
                                              .setProperty('lineHeight', '100px')
                                              .setProperty('fontSize', '30px');
 
-    this.titlePosition = new Align(this.title);
+    this.titleAlign = new Align(this.title);
 }
 
 Header.prototype = Object.create(Node.prototype);
