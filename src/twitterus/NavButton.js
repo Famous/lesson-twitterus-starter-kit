@@ -1,4 +1,5 @@
 var Node = require('famous/core/Node');
+var DOMElement = require('famous/dom-renderables/DOMElement');
 
 // The nav button class will show the name of a section
 // and emit a click event when clicked
