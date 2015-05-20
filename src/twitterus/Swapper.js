@@ -23,6 +23,26 @@ function Swapper () {
 // subclass Node
 Swapper.prototype = Object.create(Node.prototype);
 
+Swapper.prototype.changeSection = function changeSection (to) {
+    // Swap out any section that isn't the new section
+    // and swap in the new section
+    data.sections.forEach(function (section) {
+        if (section.id === to) 
+            // 500 millisecond transition
+            this.sections[section.id].align.set(0, 0, 0, {
+                duration: 500
+            });
+        else
+            // 1 in x will put the top left corner of the 
+            // section directly off the screen
+            this.sections[section.id].align.set(1, 0, 0, {
+                duration: 500
+            });
+    }.bind(this));
+
+    this.currentSection = to;
+};
+
 // overwrite onReceive to intercept events in the scene graph
 Swapper.prototype.onReceive = function onReceive (event, payload) {
     if (event === 'changeSection') this.changeSection(payload.to);
