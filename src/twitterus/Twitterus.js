@@ -4,6 +4,8 @@ function Twitterus(mount) {
     // Extend Node
     Node.call(this);
 
+    this.currentSection = data.sections[0].id;
+
     makeHeader(this);
     makeFooter(this);
     makeSwapper(this);
@@ -20,7 +22,7 @@ function makeHeader(node) {
     node.addChild()
         .setSizeMode('default', 'absolute')
         .setAbsoluteSize(null, 100)
-        .addChild();
+        .addChild(new Header());
 }
 
 function makeSwapper(node) {
