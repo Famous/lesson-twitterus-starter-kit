@@ -1,4 +1,5 @@
 var Node = require('famous/core/Node');
+var data = require('./Data');
 
 function Twitterus(mount) {
     // Extend Node
