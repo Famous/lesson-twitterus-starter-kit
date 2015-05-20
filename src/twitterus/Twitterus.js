@@ -36,7 +36,8 @@ function makeSwapper(node) {
         .addChild();
 }
 
-function makeFooter(node) {
+// make the footer
+function makeFooter (node) {
     // the footer will be aligned
     // to the bottom of its parent.
     // Like the header it will be
@@ -49,7 +50,7 @@ function makeFooter(node) {
         .setAbsoluteSize(null, 100)
         .setMountPoint(0, 1)
         .setAlign(0, 1)
-        .addChild();
+        .addChild(new Footer());
 }
 
 module.exports = Twitterus;
