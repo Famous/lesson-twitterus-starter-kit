@@ -25,15 +25,16 @@ function makeHeader(node) {
         .addChild(new Header());
 }
 
-function makeSwapper(node) {
+// make the swapper
+function makeSwapper (node) {
     // the swapper will be 200 pixels smaller than
     // its parent in Y and otherwise the same size.
     // It will be position 100 pixels below its parent
     // such that it clears the header
     node.addChild()
-        .setDifferentialSize(null, -200)
+        .setDifferentialSize(null, -200, null)
         .setPosition(0, 100)
-        .addChild();
+        .addChild(new Swapper());
 }
 
 // make the footer
