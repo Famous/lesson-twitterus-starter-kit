@@ -14,6 +14,37 @@ function Twitterus(mount) {
 // Extend the prototype
 Twitterus.prototype = Object.create(Node.prototype);
 
+// Overwrite on mount to emit the changeSection event the moment
+// twitter is added to the scene graph.
+Twitterus.prototype.onMount = function onMount (parent, id) {
+   Node.prototype.onMount.call(this, parent, id);
+   this.emit('changeSection', {from: null, to: this.currentSection});
+};
+
+// Overwrite the onReceive method to intercept events flowing within 
+// the scene graph
+Twitterus.prototype.onReceive = function onReceive (event, payload) {
+
+    // if the event is click then we know
+    // that a NavButton was clicked
+    // (NavButtons are the only element)
+    // With the click event.
+    if (event === 'click') {
+
+        // get the id of the nav button
+        var to = payload.node.getId();
+
+        // emit the changeSection event to the subtree
+        this.emit('changeSection', {
+            from: this.currentSection,
+            to: to
+        });
+
+        // set the current section
+        this.currentSection = to;
+    }
+};
+
 function makeHeader(node) {
     // the header will be positioned defaultly
     // along the top of its parent.

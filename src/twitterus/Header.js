@@ -18,4 +18,8 @@ function Header () {
 
 Header.prototype = Object.create(Node.prototype);
 
+Header.prototype.onReceive = function onReceive (event, payload) {
+    if (event === 'changeSection') this.changeSection(payload.to);
+};
+
 module.exports = Header;

@@ -14,9 +14,21 @@ function NavButton (id, status) {
     // set the content of the element
     // to the target section.
     this.el.setContent(id);
+
+    this.addUIEvent('click');
 }
 
 NavButton.prototype = Object.create(Node.prototype);
+
+// overwrite onReceive to respond to the changeSection event
+NavButton.prototype.onReceive = function onReceive (event, payload) {
+    if (event === 'changeSection') {
+        // swap on/off depend if this button points
+        // to the apps current section
+        if (payload.to === this.getId()) this.on();
+        else this.off();
+    }
+};
 
 // apply the on class
 NavButton.prototype.on = function on () {
