@@ -1,3 +1,5 @@
+var Node = require('famous/core/Node');
+
 // The nav button class will show the name of a section
 // and emit a click event when clicked
 function NavButton (id, status) {
