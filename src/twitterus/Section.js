@@ -23,15 +23,19 @@ function createTweets (id) {
 
     // create an array of length equal to the number of tweets and then
     // map over it to create an array of tweets.
-    return Array.apply(null, Array(numberOfTweets)).map(function (_, i) {
+    for (var i = 0 ; i < numberOfTweets ; i++) {
         // this node will be 100px tall and positioned after the previous one
         // in the array
-        return this.addChild()
-                   .setSizeMode('default', 'absolute')
-                   .setAbsoluteSize(null, 100)
-                   .setPosition(0, 100 * i)
-                   .addChild(new Tweet());
-    }.bind(this));
+        tweet = this.addChild()
+                    .setSizeMode('default', 'absolute')
+                    .setAbsoluteSize(null, 100)
+                    .setPosition(0, 100 * i)
+                    .addChild(new Tweet());
+
+        result.push(tweet);
+    }
+
+    return result;
 }
 
 module.exports = Section;
