@@ -27,9 +27,6 @@ In this example, we will not be making a custom component, however we will be us
 
 Create a new scene graph -- or _context_ -- by calling `.createScene()` on the FamousEngine and passing in a selector to target. This selector tells Famous where to build a scene and append all the elements to the DOM. 
 
-
-![SceneGraph](./assets/images/SG.png)
-
 Once the scene is built, we use `.addChild()` to extend the graph and add nodes. `.addChild()` called without any argument will result in a default Node being created and returned, while it can also take a specific node which it will then append to itself. We will then attach the visible elements of the application to these nodes. 
 
 In the image above, Twitterus (light grey circle) is the _root node_ of our application. It is added directly below the _Scene_. From this _root node_, the rest of our app will attach via a series of child and grandchild nodes. Let's see what the diagram above looks like written as code. 
