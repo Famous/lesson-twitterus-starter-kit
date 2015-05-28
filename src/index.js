@@ -7,5 +7,4 @@ var FamousEngine = FamousPlatform.core.FamousEngine;
 FamousEngine.init();
 
 // App Code
-require('./twitterus');
-
+require('./twitterus/main');
