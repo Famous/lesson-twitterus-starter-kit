@@ -1,5 +1,4 @@
-var data = {
-
+{
    sections: [{
        id: 'Home',
        tweetNumber: 50
@@ -16,4 +15,3 @@ var data = {
 
 };
 
-module.exports = data;

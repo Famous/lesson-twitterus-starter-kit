@@ -5,9 +5,12 @@ var Align = require('famous/components/Align');
 function Header () {
     Node.call(this);
     this.el = new DOMElement(this, {
-        classes: ['header']
+        classes: ['header'],
+        properties: {
+          'background-color': 'blue'
+        }
     });
-
+   console.log(this)
     this.title = this.addChild();
     this.titleEl = new DOMElement(this.title).setProperty('textAlign', 'center')
                                              .setProperty('lineHeight', '100px')
