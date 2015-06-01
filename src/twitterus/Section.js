@@ -20,7 +20,7 @@ Section.prototype = Object.create(Node.prototype);
 function createTweets (id) {
     var result = [];
     var numberOfTweets = data.sections[id].tweetNumber;
-
+    var tweet;
     // create an array of length equal to the number of tweets and then
     // map over it to create an array of tweets.
     for (var i = 0 ; i < numberOfTweets ; i++) {

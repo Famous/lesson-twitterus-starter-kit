@@ -25,7 +25,10 @@ Swapper.prototype = Object.create(Node.prototype);
 
 // overwrite onReceive to intercept events in the scene graph
 Swapper.prototype.onReceive = function onReceive (event, payload) {
-    if (event === 'changeSection') this.changeSection(payload.to);
+    if (event === 'changeSection') {
+        
+    }
+        //this.changeSection(payload.to);
 };
 
 function createSections () {

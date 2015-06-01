@@ -37,7 +37,7 @@ Twitterus.prototype.onReceive = function onReceive (event, payload) {
 
         // get the id of the nav button
         var to = payload.node.getId();
-
+    
         // emit the changeSection event to the subtree
         this.emit('changeSection', {
             from: this.currentSection,
