@@ -9,7 +9,22 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
         <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <style>
-        
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                position: absolute;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-font-smoothing: antialiased;
+                -webkit-tap-highlight-color: transparent;
+                -webkit-perspective: 0;
+                perspective: none;
+                overflow: hidden;
+            }
             @font-face {
                 font-family: 'open_sanssemibold';
                 src: url('./fonts/opensans-semibold-webfont.eot');
