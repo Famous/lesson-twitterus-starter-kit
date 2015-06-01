@@ -1,3 +1,4 @@
+var DOMElement = require('famous/dom-renderables/DOMElement')
 var Node = require('famous/core/Node');
 
 // The nav button class will show the name of a section
@@ -15,7 +16,9 @@ function NavButton (id, status) {
 
     // set the content of the element
     // to the target section.
-    this.el.setContent(id);
+    // initialize the buttons as off
+    this.el.setContent(id)
+           .addClass('off')
 }
 
 NavButton.prototype = Object.create(Node.prototype);
