@@ -1,5 +1,5 @@
 // Holds the data for the application
-var data = {
+{
 
     sections: [{
         id: 'Home',
@@ -21,6 +21,4 @@ var data = {
     end: ['quickly','and don\'t look back','without shoes', 'and clap your hands', 'and pat your belly', 'and do a jig', 'tomorrow', 'while eating ice cream', 'in the dark', 'at the park', 'with a friend', 'down by the bay', 'in the car', 'and yell'],
     hashtags: ['#harrystyles', '#live', '#boredom', '#mylife', '#hiphop', '#texas', '#november', '#scary', '#best',' #snowman', '#shuffle', '#squats', '#selfie' ]
 
-};
-
-module.exports = data;
+}
