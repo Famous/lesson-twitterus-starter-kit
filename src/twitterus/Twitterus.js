@@ -21,7 +21,6 @@ Twitterus.prototype = Object.create(Node.prototype);
 // Overwrite on mount to emit the changeSection event the moment
 // twitter is added to the scene graph.
 Twitterus.prototype.onMount = function onMount (parent, id) {
-   Node.prototype.onMount.call(this, parent, id);
    this.emit('changeSection', {from: null, to: this.currentSection});
 };
 
