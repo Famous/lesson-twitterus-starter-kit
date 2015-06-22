@@ -16,8 +16,9 @@ function NavButton (id, status) {
 
     // set the content of the element
     // to the target section.
-    this.el.setContent(id)
-       
+    this.el.setContent(id);
+
+    this.el.addClass('off');
 }
 
 NavButton.prototype = Object.create(Node.prototype);
